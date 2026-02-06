@@ -2,19 +2,20 @@
 @import "./my-reset.css";
 
 :root {
-    --color-black:        hsl(0, 0%, 7%);
-    --color-dark-blue:    hsl(219, 29%, 14%);
+    --color-black:        #121212;
+    --color-dark-blue:    #19202d;
     --color-white:        white;
-    --color-grey-100:     hsl(214, 17%, 92%);
-    --color-grey-200:     hsl(0, 0%, 81%);
-    --color-grey-400:     hsl(224, 10%, 45%);
-    --color-grey-500:     hsl(217, 19%, 35%);
-    --color-purple-50:    hsl(260, 100%, 95%);
-    --color-purple-300:   hsl(264, 82%, 80%);
-    --color-purple-500:   hsl(263, 55%, 52%);
+    --color-grey-100:     #e7eaee;
+    --color-grey-200:     #cfcfcf;
+    --color-grey-300:     #a3aab4;
+    --color-grey-400:     #676d7e;
+    --color-grey-500:     #48556a;
+    --color-purple-50:    #ede4ff;
+    --color-purple-300:   #a775f1;
+    --color-purple-500:   #733fc8;
 
     --text-preset-1: 600 2.0rem/1.2 "Barlow Semi Condensed", sans-serif;
-    --text-preest-2: 500 1.3rem/1.1 "Barlow Semi Condensed", sans-serif;
+    --text-preset-2: 500 1.3rem/1.1 "Barlow Semi Condensed", sans-serif;
     --text-preset-3: 500 1.3rem/1.4 "Barlow Semi Condensed", sans-serif;
     --text-preset-4: 500 1.1rem/1.1 "Barlow Semi Condensed", sans-serif;
 
@@ -25,5 +26,151 @@
     --space-100: 0.8rem;
     --space-50:  0.4rem;
 
-    --box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
+    --border: 2px solid var(--color-purple-300);
+    --border-radius: 0.8rem;
+    --box-shadow: 10px 10px 18px 7px rgba(72, 85, 106, 0.25);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: auto-fill;
+    gap: var(--space-400);
+    max-width: 30.5rem;
+    margin: 7.3rem auto;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-200);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: var(--space-400);
+}
+
+.testimonial .testimonial__decoration {
+    display: none;
+}
+
+.testimonial__avatar {
+    aspect-ratio: 1/1;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+}
+
+.testimonial__header {
+    display: flex;
+    gap: var(--space-200);
+}
+
+.testimonial__user-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-50);
+}
+
+.testimonial__name {
+    font: var(--text-preset-2);
+    color: var(--color-white);
+}
+
+.testimonial__status {
+    font: var(--text-preset-4); 
+}
+
+.testimonial__lead {
+    font: var(--text-preset-1);
+}
+
+.testimonial__quote {
+    font: var(--text-preset-3);
+}
+
+.testimonial--purple {
+    background-color: var(--color-purple-500);
+}
+
+.testimonial.testimonial--purple {
+    & .testimonial__avatar {
+        border: var(--border);
+    }
+
+    & .testimonial__status {
+        color: var(--color-purple-50);
+    }
+
+    & .testimonial__lead {
+        color: var(--color-white);
+    }
+
+    & .testimonial__quote {
+        color: var(--color-purple-50);
+    }
+}
+
+.testimonial--grey {
+    background-color: var(--color-grey-500);
+}
+
+.testimonial.testimonial--grey {
+    & .testimonial__status {
+        color: var(--color-grey-300);
+    }
+
+    & .testimonial__lead {
+        color: var(--color-white);
+    }
+
+    & .testimonial__quote {
+        color: var(--color-grey-100);
+    }
+}
+
+.testimonial--white {
+    background-color: var(--color-white);
+}
+
+.testimonial.testimonial--white {
+    & .testimonial__name {
+        color: var(--color-grey-500);
+    }
+
+    & .testimonial__status {
+        color: var(--color-grey-400);
+    }
+
+    & .testimonial__lead {
+        color: var(--color-grey-500);
+    }
+
+    & .testimonial__quote {
+        color: var(--color-grey-400);
+    }
+}
+
+.testimonial--dark-blue {
+    background-color: var(--color-dark-blue);
+}
+
+.testimonial.testimonial--dark-blue {
+    & .testimonial__avatar {
+        border: var(--border);
+    }
+
+    & .testimonial__name {
+        color: var(--color-white);
+    }
+
+    & .testimonial__status {
+        color: var(--color-white);
+    }
+
+    & .testimonial__lead {
+        color: var(--color-grey-200);
+    }
+
+    & .testimonial__quote {
+        color: var(--color-grey-100);
+    }
 }
