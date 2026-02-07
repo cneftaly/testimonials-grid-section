@@ -28,7 +28,7 @@
 
     --border: 2px solid var(--color-purple-300);
     --border-radius: 0.8rem;
-    --box-shadow: 10px 10px 18px 7px rgba(72, 85, 106, 0.25);
+    --box-shadow: 10px 25px 40px #00000057;
 }
 
 .content {
