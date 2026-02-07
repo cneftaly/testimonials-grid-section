@@ -40,6 +40,7 @@
 
 .testimonial {
     display: flex;
+    position: relative;
     flex-direction: column;
     gap: var(--space-200);
     border-radius: var(--border-radius);
@@ -54,6 +55,19 @@
 
 .testimonial .testimonial__decoration {
     display: none;
+    top: 0;
+    color: var(--color-purple-300);
+
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        display: block;
+        z-index: -1;
+        left: 58%;
+    }
+
+    @media screen and (min-width: 1440px) {
+        left: 70%;
+    }
 }
 
 .testimonial__avatar {
@@ -93,6 +107,7 @@
 
 .testimonial--purple {
     background-color: var(--color-purple-500);
+    z-index: 0;
 }
 
 .testimonial.testimonial--purple {
